@@ -1,16 +1,17 @@
 # Docker Nginx Certbot
 
-This repository contains a docker-compose for a Nginx server with Certbot with automatic certificate renew.
+This repository contains a docker-compose for a Nginx server with Certbot (Letsencrypt) with automatic certificate renew.
 
 ## How to use
 
 1. Clone this repository
-2. In the init-letsencrypt.sh file, replace the following variables with your own values:
+2. In the /data/nginx/proxy.conf, change the my.domain.com to your actual domain
+3. In the init-letsencrypt.sh file, replace the following variables with your own values:
    - `domains`: Your domain name
    - `email`: Your email address
    - `staging`: Set to 1 if you're testing your setup to avoid hitting request limits and to 0 when you're ready to issue real certificates
-3. Run the init-letsencrypt.sh script
-4. Enjoy!
+4. Run the init-letsencrypt.sh script
+5. Enjoy!
 
 ## OBS
 
